@@ -1,5 +1,5 @@
 import { ProviderSchema } from "$lib/schema/provider";
-import { fail, redirect, type Actions } from "@sveltejs/kit";
+import { type Actions, fail, redirect } from "@sveltejs/kit";
 import * as v from "valibot";
 
 export const actions: Actions = {

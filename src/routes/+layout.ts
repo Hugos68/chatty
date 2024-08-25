@@ -13,17 +13,11 @@ export const load = async (event) => {
 
 	const supabase = isBrowser()
 		? createBrowserClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY, {
-				auth: {
-					flowType: "pkce",
-				},
 				global: {
 					fetch,
 				},
 			})
 		: createServerClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY, {
-				auth: {
-					flowType: "pkce",
-				},
 				global: {
 					fetch,
 				},

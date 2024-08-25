@@ -12,16 +12,13 @@ export const handle_auth: Handle = async (request) => {
 		PUBLIC_SUPABASE_URL,
 		PUBLIC_SUPABASE_ANON_KEY,
 		{
-			auth: {
-				flowType: "pkce",
-			},
 			cookies: {
 				getAll() {
 					return request.event.cookies.getAll();
 				},
 				setAll(cookies) {
 					for (const cookie of cookies) {
-						request.event.cookies.delete(cookie.name, {
+						request.event.cookies.set(cookie.name, cookie.value, {
 							...cookie.options,
 							path: "/",
 						});

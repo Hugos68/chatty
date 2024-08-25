@@ -17,6 +17,7 @@ declare global {
 			user: User | null;
 		}
 		interface PageData {
+			supabase: SupabaseClient;
 			session: Session | null;
 		}
 		interface PageState {}
