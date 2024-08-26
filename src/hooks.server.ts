@@ -2,7 +2,6 @@ import {
 	PUBLIC_SUPABASE_ANON_KEY,
 	PUBLIC_SUPABASE_URL,
 } from "$env/static/public";
-import { i18n } from "$lib/i18n";
 import { createServerClient } from "@supabase/ssr";
 import type { Handle } from "@sveltejs/kit";
 import { sequence } from "@sveltejs/kit/hooks";
@@ -60,6 +59,4 @@ export const handle_auth: Handle = async (request) => {
 	});
 };
 
-export const handle_i18n: Handle = i18n.handle();
-
-export const handle = sequence(handle_auth, handle_i18n);
+export const handle = sequence(handle_auth);
