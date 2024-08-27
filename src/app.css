@@ -1,7 +1,0 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-
-body {
-    @apply bg-surface-50-950 text-surface-950-50;
-}
